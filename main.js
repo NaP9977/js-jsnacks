@@ -8,8 +8,35 @@ Potete ad esempio provare ad usare questo programma per inserire N voti di scuol
 
 let quantitàN = parseInt(prompt("Quanti numeri vuoi inserire?"));
 
-let numeri = parseInt(prompt("Quali numeri vuoi inserire?"));
 
+ let N = [];
+ 
+ 
+ let somma = sommaNumeri(N);
+ let media = mediaAritmetica(N);
+ console.log("Somma = " + somma);
+ console.log("Media = " + media );
+ 
+ 
+ 
+ for (let i=1; i <= quantitàN; i++){
+let numeri = parseInt(prompt("Quali numeri vuoi inserire?")+ i);
+N.push(numeri);
+ 
+ }
 
-function sommaNumeri ()
-
+ function sommaNumeri(numeri) {
+    let sommaN = 0;
+    for (let i = 0; i < numeri.length; i++) {
+      sommaN += numeri[i];
+    }
+    return sommaN;
+  }
+  
+  function mediaAritmetica(numeri) {
+    if (numeri.length === 0) {
+      return 0;
+    }
+    let sommaN = sommaNumeri(numeri);
+    return sommaN / numeri.length;
+  }
