@@ -12,7 +12,7 @@ let N = [];
 
 
 for (let i = 0; i < quantitàN; i++) {
-  let numero = parseInt(prompt("Inserisci il numero "));
+  let numero = parseInt(prompt("Quali numeri vuoi inserire? "));
   N.push(numero);
 
   let somma = sommaNumeri(N);
