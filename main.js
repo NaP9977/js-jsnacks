@@ -7,36 +7,33 @@ Utilizzare la funzione sommaNumeri precedentemente creata per calcolare la media
 Potete ad esempio provare ad usare questo programma per inserire N voti di scuola e farvi restituire qual è la media di tutti i voti inseriti! */
 
 let quantitàN = parseInt(prompt("Quanti numeri vuoi inserire?"));
+let N = [];
 
 
- let N = [];
- 
- 
- let somma = sommaNumeri(N);
- let media = mediaAritmetica(N);
- console.log("Somma = " + somma);
- console.log("Media = " + media );
- 
- 
- 
- for (let i=1; i <= quantitàN; i++){
-let numeri = parseInt(prompt("Quali numeri vuoi inserire?")+ i);
-N.push(numeri);
- 
- }
 
- function sommaNumeri(numeri) {
-    let sommaN = 0;
-    for (let i = 0; i < numeri.length; i++) {
-      sommaN += numeri[i];
-    }
-    return sommaN;
-  }
+for (let i = 0; i < quantitàN; i++) {
+  let numero = parseInt(prompt("Inserisci il numero "));
+  N.push(numero);
+
+  let somma = sommaNumeri(N);
+  let media = mediaAritmetica(N);
   
-  function mediaAritmetica(numeri) {
-    if (numeri.length === 0) {
-      return 0;
-    }
-    let sommaN = sommaNumeri(numeri);
-    return sommaN / numeri.length;
+  console.log("Somma: " + somma);
+  console.log("Media: " + media);
+
+}
+
+function sommaNumeri(numeri) {
+  let sommaN = 0;
+  for (let i = 0; i < numeri.length; i++) {
+    sommaN += numeri[i];
   }
+  return sommaN;
+}
+
+function mediaAritmetica(numeri) {
+ 
+  let sommaN = sommaNumeri(numeri);
+  return sommaN / numeri.length;
+}
+
