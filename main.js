@@ -12,8 +12,8 @@ let N = [];
 
 
 for (let i = 0; i < quantitàN; i++) {
-  let numero = parseInt(prompt("Quali numeri vuoi inserire? "));
-  N.push(numero);}
+  let numeri = parseInt(prompt("Quali numeri vuoi inserire? "));
+  N.push(numeri);}
 
   let somma = sommaNumeri(N);
   let media = mediaAritmetica(N);
