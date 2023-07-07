@@ -13,7 +13,7 @@ let N = [];
 
 for (let i = 0; i < quantitàN; i++) {
   let numero = parseInt(prompt("Quali numeri vuoi inserire? "));
-  N.push(numero);
+  N.push(numero);}
 
   let somma = sommaNumeri(N);
   let media = mediaAritmetica(N);
@@ -21,7 +21,7 @@ for (let i = 0; i < quantitàN; i++) {
   console.log("Somma: " + somma);
   console.log("Media: " + media);
 
-}
+
 
 function sommaNumeri(numeri) {
   let sommaN = 0;
